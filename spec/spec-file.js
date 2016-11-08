@@ -30,6 +30,15 @@ function checkMaxCharactersIs20() {
   element.parentElement.remove();
 }
 
+function checkHiddenIsNotShown() {
+  document.getElementById("note").value = "Testing hidden notes";
+  document.getElementById("create_note").click();
+  document.getElementById("note").value = "Another test for hidden notes another time";
+  document.getElementById("create_note").click();
+  var element = document.getElementById("3");
+  element.click();
+  expect.full_notes
+}
 // testExpectedTrueTest();
 // testExpectedFalseTest();
 seeIfPageContainsHeading();
