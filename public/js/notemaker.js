@@ -21,7 +21,10 @@ var createNote = function(){
 };
 
 var showNote = function(id) {
-  document.body.style.visibility = "hidden";
-  full_note = document.getElementById("full_" + id);
+  var input = document.getElementById('input_note');
+  input.style.visibility = "hidden";
+  var links = document.getElementById('note_links');
+  links.style.visibility = "hidden";
+  var full_note = document.getElementById("full_" + id);
   full_note.style.visibility = "visible";
 };
