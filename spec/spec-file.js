@@ -35,9 +35,10 @@ function checkHiddenIsNotShown() {
   document.getElementById("create_note").click();
   document.getElementById("note").value = "Another test for hidden notes another time";
   document.getElementById("create_note").click();
-  var element = document.getElementById("3");
+  var element = document.getElementById("4");
   element.click();
-  expect.full_notes
+  expect.
+  element.parentElement.remove();
 }
 // testExpectedTrueTest();
 // testExpectedFalseTest();
