@@ -10,11 +10,15 @@
 </head>
 <body>
 
-  <div class="header">
-    <div id="top" class="col-lg-12">
-      <span id="title">Notemaker</span>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Notemaker</a>
     </div>
-  </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </nav>
 
 
   <div class="container">
@@ -22,20 +26,20 @@
     <div id="input_note">
       <form>
 
-        <input id="note" type="text" />
+        <textarea id="note" type="text" rows="6" /></textarea>
         <button class="btn btn-info" id="create_note" onclick="createNote()" type="button" >Create Note</button>
 
       </form>
     </div>
 
-  </div>
+    <div id="note_links">
+      <ul id="listed_notes">
+      </ul>
+    </div>
 
-  <div id="note_links">
-    <ul id="listed_notes">
-    </ul>
-  </div>
+    <div id="full_note"></div>
 
-  <div id="full_note"></div>
+  </div>
 
 
   <script src="public/js/notemaker.js"></script>

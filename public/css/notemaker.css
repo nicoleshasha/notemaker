@@ -5,6 +5,7 @@ body {
 }
 
 #input_note {
+  width: 30%;
   display: inline-block;
   visibility: visible;
 }
@@ -15,37 +16,31 @@ body {
 
 #full_note {
   visibility: hidden;
+  width: 300px;
+  display: inline-block;
+  font-size: 20px;
+  color: black;
+  text-align: left;
 }
 
 #listed_notes {
   list-style: none;
-}
-
-.header {
-  height: 45px;
-  background-color: LightBlue;
-  margin-bottom: 30px;
-}
-
-#top {
-    text-align: center;
-}
-
-.glyphicon glyphicon-book {
-  position: relative;
-  left: 5%;
-}
-
-#title {
-  display: inline-block;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .container {
   text-align: center;
+  margin-top: 80px;
 }
 
+#note {
+  width: 100%;
+  margin-bottom: 10px;
+}
 
+#note, #create_note {
+  display: block;
+}
 
 .link {
   margin: 0;
