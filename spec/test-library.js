@@ -27,7 +27,6 @@ var expect = {
 
   elementIdToContain: function(expectedContents, elementId) {
     var listItemContent = document.getElementById(elementId);
-    console.log(listItemContent);
     if (!listItemContent.value.includes(expectedContents)) {
       throw new Error("Expected " + listItemContent.innerText + " to contain " + expectedContents);
     }

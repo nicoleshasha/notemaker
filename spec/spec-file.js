@@ -1,14 +1,14 @@
-function testExpectedTrueTest() {
-  expect.toBeTrue(1+1 === 2);
-}
-
-function testExpectedFalseTest() {
-  expect.toBeFalse(1+1 === 3);
-}
-
-function testToBeEqual() {
-  expect.toBeEqual(1+1, 3);
-}
+// function testExpectedTrueTest() {
+//   expect.toBeTrue(1+1 === 2);
+// }
+//
+// function testExpectedFalseTest() {
+//   expect.toBeFalse(1+1 === 3);
+// }
+//
+// function testToBeEqual() {
+//   expect.toBeEqual(1+1, 3);
+// }
 
 function seeIfPageContainsHeading() {
   expect.tagToContain("Notemaker", "h1", 0)
@@ -22,7 +22,16 @@ function seeIfNewNoteIsPrinted() {
   element.parentElement.remove();
 }
 
-testExpectedTrueTest();
-testExpectedFalseTest();
+function checkMaxCharactersIs20() {
+  document.getElementById("note").value = "Hello I am here to test the length of the button";
+  document.getElementById("create_note").click();
+  var element = document.getElementById("2");
+  expect.toBeEqual(element.value.length, 23);
+  element.parentElement.remove();
+}
+
+// testExpectedTrueTest();
+// testExpectedFalseTest();
 seeIfPageContainsHeading();
 seeIfNewNoteIsPrinted();
+checkMaxCharactersIs20();
