@@ -10,15 +10,19 @@ function testToBeEqual() {
   expect.toBeEqual(1+1, 3);
 }
 
-function seeIfPageContainsSomething() {
-  expect.toContain("Notemaker", "h1")
+function seeIfPageContainsHeading() {
+  expect.tagToContain("Notemaker", "h1", 0)
 }
 
-function seeIfShoppingListIsPrinted() {
-  expect.listToContain("Meat, Veg, Salt", "listed_notes", 0);
+function seeIfNewNoteIsPrinted() {
+  document.getElementById("note").value = "Hello";
+  document.getElementById("create_note").click();
+  expect.elementIdToContain("Hello...", "1");
+  var element = document.getElementById("1");
+  element.parentElement.remove();
 }
 
 testExpectedTrueTest();
 testExpectedFalseTest();
-seeIfPageContainsSomething();
-seeIfShoppingListIsPrinted();
+seeIfPageContainsHeading();
+seeIfNewNoteIsPrinted();
