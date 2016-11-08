@@ -8,6 +8,7 @@ var createNote = function(){
   var btn = document.createElement('input');
   btn.setAttribute('type', 'button');
   btn.setAttribute('id', counter);
+  btn.setAttribute('class', 'link');
   btn.setAttribute('onclick', 'showNote(this.id)');
   btn.setAttribute('value', note.substring(0,20) + "...");
   list.appendChild(btn);
@@ -16,11 +17,15 @@ var createNote = function(){
   para.setAttribute('id', "full_" + counter);
   para.innerHTML = note;
   document.getElementById('full_notes').appendChild(para);
+  document.getElementById('note').value = null;
   counter++;
 };
 
 var showNote = function(id) {
-  document.body.style.visibility = "hidden";
-  full_note = document.getElementById("full_" + id);
+  var input = document.getElementById('input_note');
+  input.style.visibility = "hidden";
+  var links = document.getElementById('note_links');
+  links.style.visibility = "hidden";
+  var full_note = document.getElementById("full_" + id);
   full_note.style.visibility = "visible";
 };
