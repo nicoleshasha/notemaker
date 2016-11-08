@@ -19,7 +19,6 @@ var createNote = function(){
   document.getElementById('full_notes').appendChild(para);
   document.getElementById('note').value = null;
   counter++;
-  console.log(document);
 };
 
 var showNote = function(id) {

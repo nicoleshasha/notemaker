@@ -18,16 +18,16 @@ var expect = {
     }
   },
 
-  toContain: function(expectedContents, elementId) {
-    var documentContent = document.getElementById(elementId);
+  tagToContain: function(expectedContents, elementTagName, index) {
+    var documentContent = document.getElementsByTagName(elementTagName)[index];
     if (!documentContent.innerText.includes(expectedContents)) {
       throw new Error("Expected " + documentContent.innerText + " to contain " + expectedContents);
     }
   },
 
-  listToContain: function(expectedContents, elementId, listItem) {
-    var listItemContent = document.getElementById(elementId).children[listItem];
-    if (!listItemContent.innerText.includes(expectedContents)) {
+  elementIdToContain: function(expectedContents, elementId) {
+    var listItemContent = document.getElementById(elementId);
+    if (!listItemContent.value.includes(expectedContents)) {
       throw new Error("Expected " + listItemContent.innerText + " to contain " + expectedContents);
     }
   }
