@@ -8,6 +8,7 @@ var createNote = function(){
   var btn = document.createElement('input');
   btn.setAttribute('type', 'button');
   btn.setAttribute('id', counter);
+  btn.setAttribute('class', 'link');
   btn.setAttribute('onclick', 'showNote(this.id)');
   btn.setAttribute('value', note.substring(0,20) + "...");
   list.appendChild(btn);
@@ -16,6 +17,7 @@ var createNote = function(){
   para.setAttribute('id', "full_" + counter);
   para.innerHTML = note;
   document.getElementById('full_notes').appendChild(para);
+  document.getElementById('note').value = null;
   counter++;
   console.log(document);
 };

@@ -9,3 +9,20 @@
 #full_notes {
   visibility: hidden;
 }
+
+#listed_notes {
+  list-style: none;
+}
+
+.link {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: inherit;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: DarkBlue;
+}
