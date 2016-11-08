@@ -11,11 +11,11 @@ function testToBeEqual() {
 }
 
 function seeIfPageContainsSomething() {
-  expect.toContain("Shopping List", "newNote")
+  expect.toContain("Notemaker", "h1")
 }
 
 function seeIfShoppingListIsPrinted() {
-  expect.listToContain("Meat, Veg, Salt", "noteList", 2);
+  expect.listToContain("Meat, Veg, Salt", "listed_notes", 0);
 }
 
 testExpectedTrueTest();

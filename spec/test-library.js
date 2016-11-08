@@ -18,8 +18,9 @@ var expect = {
     }
   },
 
-  toContain: function(expectedContents, elementId) {
-    var documentContent = document.getElementById(elementId);
+  toContain: function(expectedContents, element) {
+    var documentContent = document.getElementsByTagName(element)[0];
+      console.log(documentContent.innerText)
     if (!documentContent.innerText.includes(expectedContents)) {
       throw new Error("Expected " + documentContent.innerText + " to contain " + expectedContents);
     }
