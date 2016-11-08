@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link href="public/css/notemaker.css" type="text/css" rel="stylesheet" />
-    <title>Notemaker</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="public/css/notemaker.css" type="text/css" rel="stylesheet" />
+  <title>Notemaker</title>
+</head>
+<body>
 
-    <h1> Notemaker </h1>
+  <div class="header">
+    <div id="top" class="col-lg-12">
+      <span id="title">Notemaker</span>
+    </div>
+  </div>
+
+
+  <div class="container">
 
     <div id="input_note">
       <form>
 
-      <input id="note" type="text" />
-      <button id="create_note" onclick="createNote()" type="button" >Create Note</button>
+        <input id="note" type="text" />
+        <button class="btn btn-info" id="create_note" onclick="createNote()" type="button" >Create Note</button>
 
       </form>
     </div>
 
-    <div id="note_links">
-      <ul id="listed_notes">
-      </ul>
-    </div>
+  </div>
 
-    <div id="full_note"></div>
+  <div id="note_links">
+    <ul id="listed_notes">
+    </ul>
+  </div>
+
+  <div id="full_note"></div>
 
 
-    <script src="public/js/notemaker.js"></script>
-    <script src="spec/test-library.js"></script>
-    <script src="spec/spec-file.js"></script>
-  </body>
+  <script src="public/js/notemaker.js"></script>
+  <script src="spec/test-library.js"></script>
+  <script src="spec/spec-file.js"></script>
+</body>
 </html>
