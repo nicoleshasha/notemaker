@@ -1,0 +1,15 @@
+body {
+  visibility: visible;
+}
+
+#input_note {
+  visibility: visible;
+}
+
+#note_links {
+  visibility: visible;
+}
+
+#full_notes {
+  visibility: hidden;
+}
