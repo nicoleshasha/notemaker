@@ -6,11 +6,24 @@
     <title>Notemaker</title>
   </head>
   <body>
+
     <h1> Notemaker </h1>
-    <form>
-    <input id="note" type="text" ></input>
-    <button onclick="createNote()" type="button" >Create Note</button>
-    </form>
+
+    <div id="input_note">
+      <form>
+
+      <input id="note" type="text" ></input>
+      <button onclick="createNote()" type="button" >Create Note</button>
+
+      </form>
+    </div>
+
+    <div id="note_links">
+      <ul id="listed_notes"></ul>
+    </div>
+    <div id="full_note"></div>
+
+
     <script src="public/js/notemaker.js"></script>
     <script src="spec/test-library.js"></script>
     <script src="spec/spec-file.js"></script>
