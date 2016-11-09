@@ -38,9 +38,10 @@ var expect = {
     }
   },
 
-  attributeIsHidden: function(element) {
-    if (element.style.visibility === "visible") {
-      throw new Error("Expected " + element + " to be hidden");
+  isHidden: function(elementId) {
+    var element = document.getElementById(elementId);
+    if (element.style.display !== "none") {
+      throw new Error("Expected " + elementId + " to be hidden");
     }
   }
 

@@ -29,12 +29,12 @@ var showFullNote = function(id) {
 
 var invisible = function(id) {
   var element = document.getElementById(id);
-  element.style.visibility = "hidden";
+  element.style.display = "none";
 };
 
 var show = function(id) {
   var element = document.getElementById(id);
-  element.style.visibility = "visible";
+  element.style.display = "block";
 };
 
 var noteReset = function() {
@@ -55,7 +55,11 @@ var createButton = function() {
   btn.setAttribute('id', counter);
   btn.setAttribute('class', 'link');
   btn.setAttribute('onclick', 'showNote(this.id)');
+  if  (note.length > 20) {
   btn.setAttribute('value', note.substring(0,20) + "...");
+  } else {
+  btn.setAttribute('value', note);
+  }
   list.appendChild(btn);
   document.getElementById('listed_notes').appendChild(list);
 };
