@@ -19,4 +19,6 @@
 
   };
 
+  exports.NotemakerModel = NotemakerModel;
+
 })(this);
