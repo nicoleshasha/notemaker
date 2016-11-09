@@ -23,7 +23,6 @@ NotemakerView.prototype = {
     btn.setAttribute('type', 'button');
     btn.setAttribute('id', id);
     btn.setAttribute('class', 'link');
-    btn.setAttribute('onclick', 'showNote(this.id)');
     if  (note.length > 20) {
     btn.setAttribute('value', note.substring(0,20) + "...");
     } else {

@@ -1,11 +1,13 @@
 (function(exports) {
 
-function NotemakerController (full_note, note, listed_notes, notemakerModel, notemakerView) {
+function NotemakerController (full_note, note, listed_notes, create_note, notemakerModel, notemakerView) {
   this.full_note = full_note;
   this.note = note;
   this.listed_notes = listed_notes;
   this.notemakerModel = notemakerModel;
   this.notemakerView = notemakerView;
+  this.create_note = create_note;
+  this.setupButton();
 }
 
 NotemakerController.prototype = {
@@ -21,6 +23,22 @@ NotemakerController.prototype = {
     var full_note = this.notemakerModel.getNote(id);
     this.notemakerView.showFullNote(full_note);
   },
+  setupButton: function(){
+    console.log("setting up button");
+    var self = this;
+    this.create_note.addEventListener('click', function(){
+      console.log("hello");
+    self.createNote();
+    self.setupLink();
+    });
+  },
+  setupLink: function() {
+    var self = this;
+    this.listed_notes.addEventListener('click', function(){
+    self.showNote(event.target.id);
+    //console.log(this.id)
+    });
+  }
 }
 
 // var seeList = function () {
@@ -30,9 +48,9 @@ NotemakerController.prototype = {
 // };
 
 
-exports.createNote = createNote;
-exports.showNote = showNote;
-exports.seeList = seeList;
+// exports.createNote = this.createNote;
+// exports.showNote = this.showNote;
+// exports.seeList = seeList;
 exports.NotemakerController = NotemakerController;
 
 })(this);
