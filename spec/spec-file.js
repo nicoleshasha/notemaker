@@ -35,13 +35,16 @@ function checkHiddenIsNotShown() {
   document.getElementById("create_note").click();
   document.getElementById("note").value = "Another test for hidden notes another time";
   document.getElementById("create_note").click();
-  var element = document.getElementById("3");
-  element.click();
-  expect.
-  element.parentElement.remove();
+  var link_note3 = document.getElementById("3");
+  link_note3.click();
+  console.log("Hello")
+  expect.isHidden("note_links");
+  expect.elementIdToContainInnerText("Another test for hidden notes another time", "full_note");
+  // element.parentElement.remove();
 }
 // testExpectedTrueTest();
 // testExpectedFalseTest();
 seeIfPageContainsHeading();
 seeIfNewNoteIsPrinted();
 checkMaxCharactersIs20();
+checkHiddenIsNotShown();

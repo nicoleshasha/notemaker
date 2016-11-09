@@ -29,12 +29,12 @@ var showFullNote = function(id) {
 
 var invisible = function(id) {
   var element = document.getElementById(id);
-  element.style.visibility = "hidden";
+  element.style.display = "none";
 };
 
 var show = function(id) {
   var element = document.getElementById(id);
-  element.style.visibility = "visible";
+  element.style.display = "block";
 };
 
 var noteReset = function() {
