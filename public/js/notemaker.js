@@ -15,6 +15,12 @@ var showNote = function(id) {
   showFullNote(id);
 };
 
+var seeList = function () {
+  show('input_note');
+  show('note_links');
+  invisible('full_note');
+};
+
 var showFullNote = function(id) {
   full_note = document.getElementById('full_note');
   full_note.innerHTML = noteLibrary[id];
@@ -56,5 +62,6 @@ var createButton = function() {
 
 exports.createNote = createNote;
 exports.showNote = showNote;
+exports.seeList = seeList;
 
 })(this);

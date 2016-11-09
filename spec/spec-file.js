@@ -11,7 +11,7 @@
 // }
 
 function seeIfPageContainsHeading() {
-  expect.tagToContain("Notemaker", "h1", 0)
+  expect.tagToContain("Notemaker", "a", 0);
 }
 
 function seeIfNewNoteIsPrinted() {
